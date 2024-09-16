@@ -99,6 +99,7 @@ public class TextStatistics {
         assertEquals("{a=2, b=1, c=1, e=10, '=1, g=1, h=3, i=6, l=2, n=2, o=1, t=5, v=1, w=1}",
                 letterStats("I can't believe I ate the whole thing").toString());
         assertEquals("{a=3, c=1, e=1, g=2, h=1, i=3, l=3, m=1, n=1, o=2, r=1, s=4, t=1, y=2, z=1}", letterStats("This is amazing really cool").toString());
+        // ----
         System.out.println(wordCount(str));
         System.out.println(uniqueWordCount(str));
         System.out.println(wordStats(str));
