@@ -1,10 +1,8 @@
 package edu.touro.cs;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class TextStatistics {
@@ -36,12 +34,10 @@ public class TextStatistics {
                 }
             }
         }
-        wordIdx += 1;
         return wordsDict.size();
     }
     public static Map<String, Integer> wordStats (String text) {
         Map<String, Integer> instanceWordMap = new HashMap<>();
-        ArrayList<String> words = new ArrayList<>();
         String word = "";
         for (int i = 0; i < text.length(); i++) {
             if (text.charAt(i) != ' ') {
@@ -100,7 +96,9 @@ public class TextStatistics {
         assertEquals(15, letterCount("Once open a time there lived a person"));
         assertEquals(17, letterCount("computer science is about solving puzzles"));
 
-        assertEquals(1, letterStats("I can't believe I ate the whole thing").toString());
+        assertEquals("{a=2, b=1, c=1, e=10, '=1, g=1, h=3, i=6, l=2, n=2, o=1, t=5, v=1, w=1}",
+                letterStats("I can't believe I ate the whole thing").toString());
+        assertEquals("{a=3, c=1, e=1, g=2, h=1, i=3, l=3, m=1, n=1, o=2, r=1, s=4, t=1, y=2, z=1}", letterStats("This is amazing really cool").toString());
         System.out.println(wordCount(str));
         System.out.println(uniqueWordCount(str));
         System.out.println(wordStats(str));
