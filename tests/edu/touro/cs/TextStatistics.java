@@ -106,5 +106,4 @@ public class TextStatistics {
         System.out.println(letterCount(str));
         System.out.println(letterStats(str));
     }
-
 }
